@@ -1,0 +1,44 @@
+.shop {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: $bp-tablet) {
+		font-size: 60%;
+	}
+}
+.shop-button {
+	padding: 65px;
+	font-size: $font-xxl;
+	font-weight: $font-bold;
+	text-transform: uppercase;
+	background: rgba(255,255,255,1);
+	color: black;
+	position: absolute;
+	text-decoration: none;
+	transition: all .3s;
+	line-height: 0;
+	animation: pulse 750ms infinite ease-in-out alternate;
+	border: solid 2px white;
+	&:hover {
+		animation-play-state: paused;
+		background: rgba(255,255,255,0);
+		color: white;
+	}
+	@media (max-width: $bp-tablet) {
+		padding: 35px;
+	}
+	@media (max-width: $bp-mobile) {
+		animation: none;
+	}
+}
+
+@keyframes pulse {
+	50% {
+		transform: scale(0.9)
+	}
+	100% {
+		transform: scale(1)
+	}
+}

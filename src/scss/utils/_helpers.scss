@@ -1,0 +1,38 @@
+/***********************************************
+Links
+***********************************************/
+
+.cover-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	z-index: 500;
+}
+
+/***********************************************
+Images
+***********************************************/
+
+.full-width-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/***********************************************
+Margin / Padding
+***********************************************/
+
+.no-right-padding {
+	padding-right: 0 !important;
+}
+.no-space {
+	margin: 0;
+	padding: 0;
+}
+.top-margin {
+	margin-top: 25px;
+}

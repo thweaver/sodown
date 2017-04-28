@@ -1,0 +1,34 @@
+.about-container {
+	padding: em(65) em(65) em(100);
+	margin-top: em(35);
+
+	@media (max-width: $bp-tablet) {
+		padding: em(35) em(35);
+	}
+}
+.about-headline {
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	padding: em(15);
+	font-weight: $font-bold;
+	text-transform: uppercase;
+	font-size: $font-medium;
+	display: inline-block;
+	@media (max-width: $bp-tablet) {
+		font-size: 90%;
+	}
+}
+.about-bio {
+	width: 80%;
+	text-align: left;
+	font-size: $font-copy;
+	padding: em(30) 0 0;
+	color: white;
+	margin: 0 auto;
+	line-height: 1.4;
+	@media (max-width: $bp-laptop) {
+		width: 100%;
+		font-size: em(14);
+	}
+}

@@ -1,0 +1,48 @@
+.hero {
+    height: 100vh;
+}
+#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    min-width: 160%;
+    min-height: 160%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    @media (max-width: $bp-tablet) {
+        display: none;
+    }
+}
+.hero-logo {
+    width: 90%;
+    max-width: 650px;
+    min-width: 250px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s .2s;
+    transform: scale(0.4);
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    @media (max-width: $bp-laptop) {
+        width: 60%;
+    }
+    @media (max-width: $bp-tablet) {
+        top: 0;
+        bottom: 0;
+    }
+}
+.active-nav .hero-logo {
+    opacity: 0;
+    transition: opacity .5s 0s;
+}

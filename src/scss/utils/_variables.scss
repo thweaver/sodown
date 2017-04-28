@@ -1,0 +1,53 @@
+/**********************
+Breakpoints 
+***********************/
+
+$bp-xl: 1824px;
+$bp-large: 1300px;
+$bp-laptop: 1024px;
+$bp-tablet: 768px;
+$bp-mobile: 568px;
+$bp-small: 480px;
+$bp-xs: 320px;
+
+/**********************
+Colors
+***********************/
+
+$grey: #a2a2a2;
+
+/**********************
+Color Usage
+***********************/
+
+$color-accent: red;
+$color-input: #a0a0a0;
+
+
+/**********************
+Font Family
+***********************/
+
+$font-family: 'Khand', sans-serif;
+
+/**********************
+Font Weights
+***********************/
+
+$font-regular: 400;
+$font-bold: 700;
+
+/**********************
+Font Size
+***********************/
+
+$browser-context: 16; 
+$font-small: em(14);
+$font-default: em(16);
+$font-copy: em(20);
+$font-medium: em(24);
+$font-large: em(36);
+$font-xl: em(40);
+$font-xxl: em(43);
+
+

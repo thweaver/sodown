@@ -1,0 +1,28 @@
+.scroll-prompt {
+	width: 79px;
+	height: 22px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 60px;
+	margin: auto;
+	background-image: url(../img/scroll-icon.png);
+	z-index: 9997;
+	opacity: 0;
+	animation: bounce 750ms infinite cubic-bezier(1,.02,.83,.67) alternate;
+	@media (max-width: $bp-laptop) {
+		transform: scale(0.8);
+	}
+}
+ @keyframes bounce {
+ 	40% {
+ 		bottom: 60px;
+ 	}
+ 	100% {
+ 		bottom: 35px;
+ 	}
+ }
+ .active-nav .scroll-prompt {
+ 	opacity: 0;
+ 	transition: opacity .3s;
+ }
