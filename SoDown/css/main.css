@@ -17,7 +17,13 @@ Font Weights
 /**********************
 Font Size
 ***********************/
-.hamburger span:before, .hamburger span:after, .album-cover:before, .video-block div:before {
+.photo-block:after, .video-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hamburger span:before, .hamburger span:after, .album-cover:before, .video-block > div:before {
   display: block;
   content: '';
   position: absolute;
@@ -150,14 +156,14 @@ a:focus {
 Miscellaneous
 ==============================================================================*/
 ::-moz-selection {
-  background: red !important;
-  color: #fff !important;
+  background: white !important;
+  color: black !important;
   text-shadow: none !important;
 }
 
 ::selection {
-  background: red !important;
-  color: #fff !important;
+  background: white !important;
+  color: black !important;
   text-shadow: none !important;
 }
 
@@ -239,6 +245,34 @@ Text Transform
   display: block;
 }
 
+.lt-ie10 .loader {
+  display: none;
+}
+
+.browserupgrade {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding: 100px;
+}
+
+.browserupgrade p {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -248,6 +282,7 @@ Text Transform
 
 section {
   width: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -784,7 +819,7 @@ Logo
   background-position: bottom left;
 }
 
-.background {
+#background {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -800,7 +835,8 @@ Logo
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity .6s ease-out;
+  transition: opacity .3s .5s ease-out;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .background-img:nth-of-type(1) {
@@ -827,15 +863,20 @@ Logo
   background-image: url(../img/bg-photo-6.jpg);
 }
 
-.current-bg {
+.tour-bg .background-img-tour,
+.hero-bg .background-img-hero,
+.music-bg .background-img-music,
+.shop-bg .background-img-shop,
+.video-bg .background-img-video,
+.photo-bg .background-img-photo {
   z-index: 4;
   opacity: 1;
-  transition: opacity .6s .1s ease-out;
+  transition: opacity .3s .2s ease-out;
 }
 
-.prev-bg {
-  z-index: 3;
-  transition: opacity .6s .6s;
+.page-template-template-contact .background-img {
+  opacity: 1;
+  z-index: 4;
 }
 
 .music-grid {
@@ -1071,6 +1112,7 @@ a:hover .album-cover:before {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  max-width: 60%;
 }
 .section-title:before {
   display: block;
@@ -1207,7 +1249,7 @@ Emails
   margin: 0 auto;
   padding: 5.3125em 0 0;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   .contact-emails {
@@ -1351,44 +1393,93 @@ Emails
   }
 }
 
-.shop-button {
-  padding: 65px;
-  font-size: 2.6875em;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: white;
-  color: black;
-  position: absolute;
-  text-decoration: none;
-  transition: all .3s;
-  line-height: 0;
-  animation: pulse 750ms infinite ease-in-out alternate;
-  border: solid 2px white;
+.shop-cta {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.shop-button:hover {
-  animation-play-state: paused;
-  background: rgba(255, 255, 255, 0);
+
+.shop-cta-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.shop-cta-top:before {
+  display: block;
+  content: '';
+  width: 100%;
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+  z-index: 1;
+}
+.shop-cta-top:after {
+  display: block;
+  content: '';
+  width: 100%;
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+  z-index: 1;
+}
+.shop-cta-top span {
   color: white;
+  text-transform: uppercase;
+  font-size: 4.75em;
+  flex-grow: 1;
+  white-space: nowrap;
+  padding: 0 10px;
 }
-@media (max-width: 768px) {
-  .shop-button {
-    padding: 35px;
-  }
+
+.shop-cta-btm {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 5.8125em;
+  margin: 10px 0;
 }
 @media (max-width: 568px) {
-  .shop-button {
-    animation: none;
+  .shop-cta-btm {
+    font-size: 4.625em;
   }
 }
 
-@keyframes pulse {
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.shop-button {
+  border: solid 1px white;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background .3s;
+  width: 9.375em;
+  height: 3.4375em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.shop-button span {
+  margin: auto;
+  display: block;
+  font-size: 1.625em;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .3s;
+  display: block;
+  text-align: center;
+}
+.shop-button:hover {
+  background: white;
+}
+.shop-button:hover span {
+  color: black;
+}
+
 .scroll-prompt {
   width: 79px;
   height: 22px;
@@ -1427,7 +1518,12 @@ Emails
 
 .photo-container {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 150px;
+}
+@media (max-width: 768px) {
+  .photo-container {
+    padding-bottom: 60px;
+  }
 }
 
 .photo-block {
@@ -1435,6 +1531,7 @@ Emails
   height: 0;
   width: 100%;
   padding-bottom: 138.6%;
+  margin-bottom: -138.6%;
 }
 .photo-block div {
   position: absolute;
@@ -1450,7 +1547,7 @@ Emails
   transition: opacity .6s, transform .6s;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/temp-contact-photo.jpg);
+  background-position: center;
 }
 .photo-block div:nth-of-type(1) {
   width: 18%;
@@ -1524,7 +1621,6 @@ Emails
 @media (max-width: 768px) {
   .photo-block {
     height: auto;
-    padding-bottom: 0;
   }
   .photo-block div {
     position: relative;
@@ -1550,12 +1646,13 @@ Emails
   height: 0;
   width: 100%;
   padding-bottom: 94%;
+  margin-bottom: -94%;
 }
-.video-block div {
+.video-block > div {
   position: absolute;
   overflow: hidden;
 }
-.video-block div:before {
+.video-block > div:before {
   width: 2.625em;
   height: 2.625em;
   left: 10px;
@@ -1568,7 +1665,7 @@ Emails
   background: url(../img/icon-play.svg) no-repeat center rgba(255, 255, 255, 0.8);
   background-size: 1.25em;
 }
-.video-block div a {
+.video-block > div a {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -1578,57 +1675,57 @@ Emails
   transition: opacity .6s, transform .6s;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/temp-contact-photo.jpg);
+  background-position: center;
 }
-.video-block div:nth-of-type(1) {
+.video-block > div:nth-of-type(1) {
   width: 66.6%;
   height: 39%;
 }
-.video-block div:nth-of-type(2) {
+.video-block > div:nth-of-type(2) {
   left: 66.6%;
   height: 19.5%;
   width: 33.3%;
 }
-.video-block div:nth-of-type(3) {
+.video-block > div:nth-of-type(3) {
   left: 66.6%;
   width: 33.3%;
   height: 19.5%;
   top: 19.5%;
 }
-.video-block div:nth-of-type(4) {
+.video-block > div:nth-of-type(4) {
   top: 39%;
   width: 33.3%;
   height: 19.5%;
 }
-.video-block div:nth-of-type(5) {
+.video-block > div:nth-of-type(5) {
   top: 39%;
   width: 33.3%;
   height: 19.5%;
   left: 33.3%;
 }
-.video-block div:nth-of-type(6) {
+.video-block > div:nth-of-type(6) {
   top: 39%;
   width: 33.3%;
   height: 19.5%;
   left: 66.6%;
 }
-.video-block div:nth-of-type(7) {
+.video-block > div:nth-of-type(7) {
   top: 58.5%;
   width: 33.3%;
   height: 19.5%;
 }
-.video-block div:nth-of-type(8) {
+.video-block > div:nth-of-type(8) {
   top: 78%;
   width: 33.3%;
   height: 19.5%;
 }
-.video-block div:nth-of-type(9) {
+.video-block > div:nth-of-type(9) {
   width: 66.6%;
   height: 39%;
   left: 33.3%;
   top: 58.5%;
 }
-.video-block div:hover a {
+.video-block > div:hover a {
   opacity: 0.6;
   transform: scale(1.2);
   transition: opacity .3s, transform 2s;
@@ -1637,28 +1734,57 @@ Emails
   .video-block {
     height: auto;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
-  .video-block div {
+  .video-block > div {
     position: relative;
-    width: 33.3% !important;
+    width: 50% !important;
     height: 0 !important;
     padding-bottom: 33.3%;
     float: left;
     left: 0 !important;
   }
-  .video-block div a {
+  .video-block > div a {
     position: absolute;
     top: 1px;
     left: 1px;
     right: 1px;
     bottom: 1px;
     margin: auto;
-    background-color: red;
   }
 }
 @media (max-width: 568px) {
-  .video-block {
-    width: 100%;
+  .video-block > div {
+    width: 100% !important;
+    height: 200px !important;
+    padding-bottom: 0;
+    float: none;
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.video-buttons {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60%;
+}
+@media (max-width: 768px) {
+  .video-buttons {
+    margin-top: 25px;
   }
 }
 
@@ -1921,12 +2047,17 @@ Social Media Container
 
 /* ------- inline window ------ */
 .vbox-inline {
-  width: 420px;
+  width: 100%;
+  max-width: 800px;
   max-height: 1000px;
   padding: 10px;
   text-align: left;
   margin: 0 auto;
+  background: transparent !important;
   overflow: auto;
+}
+.vbox-inline iframe {
+  margin: 0 auto;
 }
 
 /* ------- Video & iFrames window ------ */

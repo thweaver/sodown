@@ -77,13 +77,13 @@ Miscellaneous
 ==============================================================================*/
 
 ::-moz-selection {
-  background: $color-accent !important;
-  color: #fff !important;
+  background: white !important;
+  color: black !important;
   text-shadow: none !important;
 }
 ::selection { 
-  background: $color-accent !important;
-  color: #fff !important;
+  background: white !important;
+  color: black !important;
   text-shadow: none !important;
 }
 

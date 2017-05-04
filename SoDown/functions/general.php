@@ -400,6 +400,16 @@ function parse_youtube_url($url){
 		return $url;	
 	}
 }
+
+function fb_embed($url){
+	$videos = array('https://www.facebook.com/sodownbassmusic/videos/'.$url.'/', 'https://www.facebook.com/videos/'.$url.'/);');
+	foreach($videos as $f_video){
+	    preg_match("~/videos/(?:t\.\d+/)?(\d+)~i", $f_video, $matches);
+	    print_r($matches);
+	}
+}
+
+
 /*==============================================================================
 Miscellaneous / Utility / Helper
 ==============================================================================*/

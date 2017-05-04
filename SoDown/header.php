@@ -14,11 +14,11 @@
 <meta property="og:title" content="<?php tfg_title(); ?>" />
 <meta property="og:description" content="<?php tfg_description(); ?>" />
 <meta property="og:site_name" content="<?php bloginfo(); ?>" />
-<meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/fb.png" />
+<meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/fb.png?v=4" />
 <meta property="og:url" content="<?php current_url(); ?>" />
 <meta property="og:type" content="website" />
 <!--[if IE]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=2" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=3" />
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico?v=1" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script>if(typeof Modernizr == 'undefined'){document.write(unescape("%3Cscript src='<?php bloginfo('template_url'); ?>/js/modernizr.min.js'%3E%3C/script%3E"));}</script>
@@ -34,6 +34,9 @@
     }
 ?>
 <body <?php body_class($body_class); ?>>
+<!--[if lt IE 10]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. <br/>Please upgrade your browser to view this website.</p>
+<![endif]-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -54,21 +57,21 @@
 			<div class="nav-group">
 				<ul class="nav-group-1">
 					<li class="nav-item main-nav-item" id="nav-tour">
-						<a href="#section-2">Tour</a>
+						<a href="#tour">Tour</a>
 					</li>
 					<li class="nav-item main-nav-item" id="nav-music">
-						<a href="#section-3">Music</a>
+						<a href="#music">Music</a>
 					</li>
 					<li class="nav-item main-nav-item" id="nav-shop">
-						<a href="#section-4">Shop</a>
+						<a href="#shop">Shop</a>
 					</li>
 				</ul>
 				<ul class="nav-group-2">
 					<li class="nav-item main-nav-item" id="nav-videos">
-						<a href="#section-5">Videos</a>
+						<a href="#videos">Videos</a>
 					</li>
 					<li class="nav-item main-nav-item" id="nav-photos">
-						<a href="#section-6">Photos</a>
+						<a href="#photos">Photos</a>
 					</li>
 					<li class="nav-item" id="nav-contact">
 						<a href="<?php bloginfo('url'); ?>/contact">Contact</a>
@@ -76,28 +79,28 @@
 				</ul>
 			</div>
 			<h1 class="site-logo main-site-logo">
-				<a href="#section-1">SoDown</a>
+				<a href="#home">SoDown</a>
 			</h1>
 		<?php } ?>
 		<?php if ( is_page('contact') ) { ?>
 		    <div class="nav-group">
 		    	<ul class="nav-group-1">
 		    		<li class="nav-item" id="nav-tour">
-		    			<a href="<?php bloginfo('url'); ?>#section-2">Tour</a>
+		    			<a href="<?php bloginfo('url'); ?>#tour">Tour</a>
 		    		</li>
 		    		<li class="nav-item" id="nav-music">
-		    			<a href="<?php bloginfo('url'); ?>#section-3">Music</a>
+		    			<a href="<?php bloginfo('url'); ?>#music">Music</a>
 		    		</li>
 		    		<li class="nav-item" id="nav-shop">
-		    			<a href="<?php bloginfo('url'); ?>#section-4">Shop</a>
+		    			<a href="<?php bloginfo('url'); ?>#shop">Shop</a>
 		    		</li>
 		    	</ul>
 		    	<ul class="nav-group-2">
 		    		<li class="nav-item" id="nav-videos">
-		    			<a href="<?php bloginfo('url'); ?>#section-5">Videos</a>
+		    			<a href="<?php bloginfo('url'); ?>#videos">Videos</a>
 		    		</li>
 		    		<li class="nav-item" id="nav-photos">
-		    			<a href="<?php bloginfo('url'); ?>#section-6">Photos</a>
+		    			<a href="<?php bloginfo('url'); ?>#photos">Photos</a>
 		    		</li>
 		    		<li class="nav-item nav-item-current" id="nav-contact">
 		    			<a href="<?php bloginfo('url'); ?>/contact">Contact</a>

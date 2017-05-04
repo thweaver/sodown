@@ -88,12 +88,12 @@ Background Photos
 =================================================*/
 
 var
-	sectionOne = $('#section-1'),
-	sectionTwo = $('#section-2'),
-	sectionThree = $('#section-3'),
-	sectionFour = $('#section-4'),
-	sectionFive = $('#section-5'),
-	sectionSix = $('#section-6'),
+	sectionOne = $('#home'),
+	sectionTwo = $('#tour'),
+	sectionThree = $('#music'),
+	sectionFour = $('#shop'),
+	sectionFive = $('#videos'),
+	sectionSix = $('#photos'),
 	bgOne = $('#bg-1'),
 	bgTwo = $('#bg-2'),
 	bgThree = $('#bg-3'),
@@ -103,18 +103,12 @@ var
 
 function updateSection() {
 	if (win.scrollTop() >= sectionOne.offset().top - 300 && body.hasClass('home') ) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgOne.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 	}
 }
 
 function updateSectionTwo() {
 	if (win.scrollTop() >= sectionTwo.offset().top  - 300 && body.hasClass('home')) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgTwo.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 		$('#nav-tour').addClass('nav-item-current');
 	}
@@ -122,9 +116,6 @@ function updateSectionTwo() {
 
 function updateSectionThree() {
 	if (win.scrollTop() >= sectionThree.offset().top  - 300 && body.hasClass('home')) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgThree.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 		$('#nav-music').addClass('nav-item-current');
 	}
@@ -132,9 +123,6 @@ function updateSectionThree() {
 
 function updateSectionFour() {
 	if (win.scrollTop() >= sectionFour.offset().top  - 300 && body.hasClass('home')) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgFour.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 		$('#nav-shop').addClass('nav-item-current');
 	}
@@ -142,9 +130,6 @@ function updateSectionFour() {
 
 function updateSectionFive() {
 	if (win.scrollTop() >= sectionFive.offset().top  - 300 && body.hasClass('home')) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgFive.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 		$('#nav-videos').addClass('nav-item-current');
 	}
@@ -152,9 +137,6 @@ function updateSectionFive() {
 
 function updateSectionSix() {
 	if (win.scrollTop() >= sectionSix.offset().top  - 300 && body.hasClass('home')) { 
-		$('.prev-bg').removeClass('prev-bg');
-		$('.current-bg').addClass('prev-bg').removeClass('current-bg');
-		bgSix.addClass('current-bg');
 		navItem.removeClass('nav-item-current');
 		$('#nav-photos').addClass('nav-item-current');
 	}
@@ -167,6 +149,25 @@ win.on( 'scroll load', updateSectionThree);
 win.on( 'scroll load', updateSectionFour);
 win.on( 'scroll load', updateSectionFive);
 win.on( 'scroll load', updateSectionSix);
+
+
+$( window ).ready(function() {
+  
+    var wHeight = $(window).height();
+
+    $('section')
+      .scrollie({
+        scrollOffset : -50,
+        scrollingInView : function(elem) {
+                   
+          var bgImage = elem.data('class');
+          $('#background').removeClass();
+          $('#background').addClass(bgImage);
+          
+        }
+      });
+
+  });
 
 /*==================================================
 Expanded Nav
@@ -191,9 +192,11 @@ function videoStop() {
 				if( isStopped && scrollTop < stopPoint ) {
 					isStopped = false;
 					$('video').get(0).play();
+					$("video").prop('muted', true);
 				} else if( !isStopped && scrollTop >= stopPoint ) {
 					isStopped = true;
 					$('video').get(0).pause();
+					$("video").prop('muted', true);
 				}
 			}
 			
@@ -213,11 +216,9 @@ function extendedNav() {
 				if( isextended && scrollTop < swapPoint ) {
 					isextended = false;
 					html.delay(200).removeClass( 'active-nav' );
-					console.log('active');
 				} else if( !isextended && scrollTop >= swapPoint ) {
 					isextended = true;
 					html.delay(200).addClass( 'active-nav' );
-					console.log('inactive');
 				}
 			}
 			
@@ -228,26 +229,11 @@ function extendedNav() {
 win.on( 'load', extendedNav );
 
 /*==================================================
-Parralax
-===================================================*/
-
-// win.scroll(function(i){
-// 	if (win.innerWidth() > 800 && !html.hasClass('ie9') ) {
-// 		var scrollVar = win.scrollTop(),
-// 			scale = 1+.0009*scrollVar,
-// 			scaleAlt = 0.5+.0004*scrollVar,
-// 			opacity = 1-scrollVar;
-// 	   	$('.scroll-prompt').css({'opacity': 1 - win.scrollTop() / (window.innerHeight - 400) });
-
-// 	}
-// })
-
-/*==================================================
 Scroll To
 ==================================================*/
 
 $('a[href^="#"]').on('click', function(event) {
-	if (win.innerWidth() >= 800) {
+	if (win.innerWidth() >= 800 && body.hasClass('home')) {
 	    var target = $(this.getAttribute('href'));
 	    if( target.length ) {
 	        event.preventDefault();
@@ -256,7 +242,7 @@ $('a[href^="#"]').on('click', function(event) {
 	        }, 1000);
 	    }
 	}
-	if (win.innerWidth() < 800) {
+	if (win.innerWidth() < 800 && body.hasClass('home')) {
 	    var target = $(this.getAttribute('href'));
 	    if( target.length ) {
 	        event.preventDefault();
@@ -268,58 +254,21 @@ $('a[href^="#"]').on('click', function(event) {
 });
 
 /*==================================================
-Logo Toggle
-==================================================*/
-
-// var scrollTop;
-
-// function updateScrollTop() {
-// 	scrollTop = win.scrollTop();
-// }
-// win.on( 'scroll load', updateScrollTop );
-
-// function extendedNav() {
-// 	if ($('.logo-toggle-point').exists()) {
-// 		var isextended = false,
-// 			headerLogo = $( '.logo-toggle-point' ),
-// 			navHeight = nav.height();
-		
-// 		function checkextendedNav() {
-// 			swapPoint = headerLogo.offset().top + headerLogo.height() - navHeight;
-// 			if( isextended && scrollTop < swapPoint ) {
-// 				isextended = false;
-// 				html.removeClass( 'logo-swap' );
-// 			} else if( !isextended && scrollTop >= swapPoint ) {
-// 				isextended = true;
-// 				html.addClass( 'logo-swap' );
-// 			}
-// 		}
-
-// 		function returnExpanded() {
-// 			if(html.hasClass('tablet-size')) {
-// 				html.removeClass('logo-swap');
-// 			}
-// 		}
-		
-// 		win.on( 'scroll resize', checkextendedNav );
-// 		checkextendedNav();
-// 		win.on( 'scroll resize', returnExpanded );
-// 		returnExpanded();
-// 	}
-// }
-// win.on( 'load', extendedNav );
-
-
-/*==================================================
 Replave SC href
 ==================================================*/
 
-iFlink.click(function(){
-    $(this).siblings(".iframe-content").find("iframe").prop("src", function(){
-        // Set their src attribute to the value of data-src
-      return $(this).data("src");
+$(document).ready(function(){
+ 
+        $.ajaxSetup({cache:false});
+        $(".if-link").click(function(){
+            var post_link = $(this).attr("href");
+ 
+            $(".video-container").html("content loading");
+            $(".video-container").load(post_link);
+        return false;
+        });
+ 
     });
-});
 
 
 }); // jQuery 

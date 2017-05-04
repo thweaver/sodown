@@ -1,35 +1,38 @@
-<section id="section-5" class="videos">
+<section id="videos" class="videos" data-class="video-bg">
 	<div class="container">
 		<h2 class="section-title">
 			<span>Videos</span>
 		</h2>
-		<div class="video-block">
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
+		<div class="content">
+			<div class="video-block">
+				<?php
+					$sc_query = new WP_Query(array(
+						'posts_per_page' => 6,
+						'post_type' => 'videos',
+						'order' => 'DESC'
+					));
+				?>
+				<?php if( $sc_query->have_posts() ) : ?>
+					<?php while( $sc_query->have_posts() ) : $sc_query->the_post(); ?>
+						<?php
+							$video_thumb = get_field( 'video_thumb' );
+							$video_thumb = $video_thumb['sizes']['video_img'];
+						?>
+						<div>
+							<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="venobox if-link" data-type="ajax" data-gall="video" style="background-image: url(<?php video_thumbnail(); ?>)"></a>
+							<div id="post-<?php the_ID(); ?>" class="iframe-content">
+								<div class="video-container ">
+								</div>
+							</div>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
-			</div>
-			<div>
-				<a href="<?php bloginfo('template_url'); ?>/img/temp-contact-photo.jpg" class="venobox" data-gall="instagram"></a>
+			<div class="video-buttons">
+				<a href="#" class="music-button music-button--text" target="_blank">
+					<span>View All</span>
+				</a>
 			</div>
 		</div>
+	</div>
 </section>

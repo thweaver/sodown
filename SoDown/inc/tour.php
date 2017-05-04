@@ -1,4 +1,4 @@
-<section id="section-2" class="tour">
+<section id="tour" class="tour" data-class="tour-bg">
 	<div class="container">
 		<h2 class="section-title">
 			<span>Tour</span>

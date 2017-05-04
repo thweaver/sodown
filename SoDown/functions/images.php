@@ -13,7 +13,9 @@ if(function_exists('add_theme_support')){
 /*================================================================================*/
 
 if(function_exists('add_image_size')){ 
-	add_image_size( 'page-photo', 1200, 478, true);
+	add_image_size( 'square', 400, 400, true);
+    add_image_size( 'video_img', 675, 380, true);
+    add_image_size( 'page_img', 1130, 450, true);
     add_image_size( 'full', 1200, 2000 );
 }
 
