@@ -1,6 +1,13 @@
 <?php
 
-
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+function my_login_stylesheet() { ?>
+	<link rel="stylesheet"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/css/wp-login.css'; ?>" />
+<?php }
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+function my_login_logo_url() {
+	return get_bloginfo( 'url' );
+}
 
 /*================================================================================*/
 /* Hide Menus and Update */
@@ -78,13 +85,21 @@ if ($user_id == 2) {
 	add_action('admin_enqueue_scripts', 'nav_hide_stylesheet');
 	function nav_hide_stylesheet() { ?>
 		<style>
+			#menu-dashboard,
 			#menu-dashboard ul,
 			#menu-comments,
+			#wp-admin-bar-w3tc,
 			#menu-media,
-			#pageparentdiv,
+			#toplevel_page_edit-post_type-acf-field-group,
+			#menu-posts,
+			#toplevel_page_cptui_main_menu,
+			#toplevel_page_w3tc_dashboard,
+			#toplevel_page_Wordfence,
+			#menu-pages,
 			#menu-plugins,
-			#menu-appearance,
 			#menu-users,
+			#pageparentdiv,
+			#menu-appearance,
 			#menu-tools,
 			#menu-settings,
 			#toplevel_page_edit-post_type-acf,
@@ -113,11 +128,9 @@ if ($user_id == 2) {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'Social Media Links',
-		'menu_title'	=> 'Social Media Links',
-		'menu_slug' 	=> 'social-media-inks',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
+		'page_title' 	=> 'Photos',
+		'menu_title'	=> 'Photos',
+		'menu_slug' 	=> 'photos',
 	));
 
 	acf_add_options_page(array(
@@ -133,10 +146,16 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Photos',
-		'menu_title'	=> 'Photos',
-		'menu_slug' 	=> 'photos',
+		'page_title' 	=> 'Site Links',
+		'menu_title'	=> 'Site Links',
+		'menu_slug' 	=> 'social-media-inks',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
 	));
+
+	
+
+	
 	
 	// acf_add_options_sub_page(array(
 	// 	'page_title' 	=> 'Theme Header Settings',
