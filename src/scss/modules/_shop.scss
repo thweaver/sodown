@@ -49,6 +49,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0 auto;
+}
+.ie11 .shop-cta {
+	width: 100%;
 }
 .shop-cta-top {
 	position: relative;
@@ -84,6 +88,10 @@
 		padding: 0 10px;
 		width: 100%;
 	}
+}
+.ie11 .shop-cta-top:before, 
+.ie11 .shop-cta-top:after {
+	display: none;
 }
 .shop-cta-btm {
 	color: white;
@@ -127,4 +135,7 @@
 	}
 
 
+}
+.ie11 .shop-button span {
+	width: 100%;
 }

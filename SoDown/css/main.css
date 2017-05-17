@@ -273,6 +273,14 @@ Text Transform
   margin: auto;
 }
 
+.ie-upgrade {
+  display: none;
+}
+
+.ie10 .ie-upgrade {
+  display: block;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -1514,6 +1522,11 @@ Emails
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+}
+
+.ie11 .shop-cta {
+  width: 100%;
 }
 
 .shop-cta-top {
@@ -1550,6 +1563,11 @@ Emails
   white-space: nowrap;
   padding: 0 10px;
   width: 100%;
+}
+
+.ie11 .shop-cta-top:before,
+.ie11 .shop-cta-top:after {
+  display: none;
 }
 
 .shop-cta-btm {
@@ -1594,6 +1612,10 @@ Emails
 }
 .shop-button:hover span {
   color: black;
+}
+
+.ie11 .shop-button span {
+  width: 100%;
 }
 
 .scroll-prompt {
@@ -1987,6 +2009,10 @@ Social Media Container
 }
 .sm-item:hover a svg path {
   fill: white;
+}
+
+.ie11 .sm-item svg {
+  width: 20px;
 }
 
 /* ------ venobox.css --------*/

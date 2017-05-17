@@ -23,3 +23,9 @@
 	bottom: 0;
 	margin: auto;
 }
+.ie-upgrade {
+	display: none;
+}
+.ie10 .ie-upgrade {
+	display: block;
+}

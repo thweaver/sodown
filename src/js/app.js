@@ -271,4 +271,17 @@ $(document).ready(function(){
     });
 
 
+/*===============================================
+IE 10
+===============================================*/
+
+if (navigator.userAgent.match('MSIE 10.0;')) {
+  $('html').addClass('ie10');
+}
+
+if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) {
+    $('html').addClass('ie11');
+}
+
+
 }); // jQuery 
