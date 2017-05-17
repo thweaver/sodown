@@ -19,8 +19,8 @@
 			<?php
 				$sc_query = new WP_Query(array(
 					'posts_per_page' => 15,
-					'post_type' => 'soundcloud',
-					'order' => 'DESC'
+					'post_type' => 'soundcloud'
+					
 				));
 			?>
 			<?php if( $sc_query->have_posts() ) : ?>

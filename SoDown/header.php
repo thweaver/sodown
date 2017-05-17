@@ -16,6 +16,7 @@
 <meta property="og:site_name" content="<?php bloginfo(); ?>" />
 <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/fb.png?v=4" />
 <meta property="og:url" content="<?php current_url(); ?>" />
+<meta name="google-site-verification" content="quJEH4DeWCtmZZFwTTcU7Wn6rgEys4drBk1UM9NKHOQ" />
 <meta property="og:type" content="website" />
 <!--[if IE]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=3" />

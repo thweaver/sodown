@@ -1,16 +1,21 @@
+.photos {
+	padding-bottom: 150px;
+	@media (max-width: $bp-tablet) {
+		padding-bottom: 50px;
+	}
+}
 .photo-container {
 	position: relative;
-	padding-bottom: 150px;
+	padding-bottom: 60px;
 	@media (max-width: $bp-tablet) { 
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 	}
 }
 .photo-block {
 	position: relative;
 	height: 0;
 	width: 100%;
-	padding-bottom: 138.6%;
-	margin-bottom: -138.6%;
+	padding-bottom: 60.6%;
 	@extend %clearfix;
 	div {
 		position: absolute;
@@ -29,70 +34,41 @@
 		}
 		&:nth-of-type(1) {
 			width: 18%;
-			height: 13.2%;
+			height: 26.4%;
 		}
 		&:nth-of-type(2) {
 			left: 18%;
-			height: 13.2%;
+			height: 26.4%;
 			width: 37%;
 		}
 		&:nth-of-type(3) {
 			left: 55%;
 			width: 45%;
-			height: 26.4%;
+			height: 52.8%;
 		}
 		&:nth-of-type(4) {
-			top: 13.2%;
+			top: 26.4%;
 			width: 55%;
-			height: 13.2%;
+			height: 26.4%;
 		}
 		&:nth-of-type(5) {
-			top: 26.4%;
+			top: 52.8%;
 			width: 45%;
-			height: 13.2%;
+			height: 26.4%;
 		}
 		&:nth-of-type(6) {
-			top: 26.4%;
+			top: 52.8%;
 			width: 18%;
 			left: 45%;
-			height: 13.2%;
+			height: 26.4%;
 		}
 		&:nth-of-type(7) {
-			top: 26.4%;
+			top: 52.8%;
 			width: 37%;
 			left: 63%;
-			height: 13.2%;
-		}
-		&:nth-of-type(8) {
-			top: 39.6%;
-			width: 100%;
 			height: 26.4%;
 		}
 
-
-		&:nth-of-type(9) {
-			width: 45%;
-			height: 26.4%;
-			top: 66%;
-		}
-		&:nth-of-type(10) {
-			left: 45%;
-			height: 13.2%;
-			width: 37%;
-			top: 66%;
-		}
-		&:nth-of-type(11) {
-			left: 82%;
-			width: 18%;
-			height: 13.2%;
-			top: 66%;
-		}
-		&:nth-of-type(12) {
-			top: 79.2%;
-			width: 55%;
-			height: 13.2%;
-			right: 0;
-		}
 		&:hover a {
 			opacity: 0.6;
 			transform: scale(1.2);
@@ -102,6 +78,7 @@
 
 	@media (max-width: $bp-tablet) {
 		height: auto;
+		padding-bottom: 40px;
 		div {
 			position: relative;
 			width: 50% !important;
@@ -121,4 +98,9 @@
 		}
 	}
 }
-
+.photo-container .video-buttons {
+	margin-top: -8%;
+	@media (max-width: $bp-tablet) {
+		margin-top: 0;
+	}
+}

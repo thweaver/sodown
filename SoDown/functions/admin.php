@@ -131,6 +131,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Bio',
 		'menu_slug' 	=> 'bio',
 	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Photos',
+		'menu_title'	=> 'Photos',
+		'menu_slug' 	=> 'photos',
+	));
 	
 	// acf_add_options_sub_page(array(
 	// 	'page_title' 	=> 'Theme Header Settings',

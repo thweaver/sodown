@@ -169,3 +169,21 @@ a {
 		}
 	}
 }
+.music-content {
+	display: flex;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	padding: 20px;
+	iframe {
+		flex-grow: 1;
+		margin: 0 4px !important;
+	}
+	@media (max-width: $bp-tablet ) {
+		flex-wrap: wrap;
+		iframe {
+			width: 100%;
+			margin-bottom: 8px !important;
+		}
+	}
+}

@@ -364,7 +364,15 @@ function sc_embed($url){
 	echo $soundcloud->html;
 }
 
+function my_deregister_heartbeat() {
+    global $pagenow;
 
+    if ( 'single-soundcloud.php' != $pagenow && 'single-videos.php' != $pagenow ) {
+         wp_deregister_script('heartbeat');
+         wp_register_script('heartbeat', false);
+     }
+}
+add_action( 'admin_enqueue_scripts', 'my_deregister_heartbeat' );
 
 /*================================================================================*/
 /* YouTube */

@@ -29,7 +29,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="video-buttons">
-				<a href="#" class="music-button music-button--text" target="_blank">
+				<a href="<?php the_field('facebook', 'option'); ?>" class="music-button music-button--text" target="_blank">
 					<span>View All</span>
 				</a>
 			</div>
