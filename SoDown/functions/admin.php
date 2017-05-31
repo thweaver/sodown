@@ -128,6 +128,11 @@ if ($user_id == 2) {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
+		'page_title' 	=> 'Music',
+		'menu_title'	=> 'Music',
+		'menu_slug' 	=> 'music',
+	));
+	acf_add_options_page(array(
 		'page_title' 	=> 'Photos',
 		'menu_title'	=> 'Photos',
 		'menu_slug' 	=> 'photos',
@@ -152,10 +157,6 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-
-	
-
-	
 	
 	// acf_add_options_sub_page(array(
 	// 	'page_title' 	=> 'Theme Header Settings',

@@ -65,7 +65,7 @@ Social Media Container
 	&:first-of-type {
 		margin-left: 0;
 	}
-	svg {
+	svg, img {
 		height: 18px;
 		width: auto;
 		display: block;
@@ -75,13 +75,15 @@ Social Media Container
 			transition: all .3s;
 		}
 	}
-	&:hover a svg {
+	&:hover a svg,
+	&:hover a img {
 		transform: scale(0.7);
 		path {
 			fill: white;
 		}
 	}
 }
-.ie11 .sm-item svg {
+.ie11 .sm-item svg,
+.ie11 .sm-item img {
 	width: 20px;
 }

@@ -11,10 +11,8 @@
 			if( $images ): ?>
 			<div class="photo-block">
 				<?php foreach( $images as $image ): ?>
-				<div>
-					<a href="<?php echo $image['url']; ?>" target="_blank" class="instagram-item venobox" data-gall="gallery" style="background-image:url(<?php echo $image['sizes']['full']; ?>)">
+					<a href="<?php echo $image['url']; ?>" target="_blank" class="instagram-item venobox" data-gall="gallery" style="background-image:url(<?php echo $image['sizes']['square']; ?>)">
 					</a>
-				</div>
 				<?php endforeach; ?>
 			</div>
 			<?php endif; ?>	

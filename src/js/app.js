@@ -102,41 +102,41 @@ var
 	bgFour = $('#bg-4');
 
 function updateSection() {
-	if (win.scrollTop() >= sectionOne.offset().top - 300 && body.hasClass('home') ) { 
+	if (win.scrollTop() >= sectionOne.offset().top - 200 && body.hasClass('home') ) { 
 		navItem.removeClass('nav-item-current');
 	}
 }
 
 function updateSectionTwo() {
-	if (win.scrollTop() >= sectionTwo.offset().top  - 300 && body.hasClass('home')) { 
+	if (win.scrollTop() >= sectionTwo.offset().top  - 200 && body.hasClass('home')) { 
 		navItem.removeClass('nav-item-current');
 		$('#nav-tour').addClass('nav-item-current');
 	}
 }
 
 function updateSectionThree() {
-	if (win.scrollTop() >= sectionThree.offset().top  - 300 && body.hasClass('home')) { 
+	if (win.scrollTop() >= sectionThree.offset().top  - 200 && body.hasClass('home')) { 
 		navItem.removeClass('nav-item-current');
 		$('#nav-music').addClass('nav-item-current');
 	}
 }
 
 function updateSectionFour() {
-	if (win.scrollTop() >= sectionFour.offset().top  - 300 && body.hasClass('home')) { 
+	if (win.scrollTop() >= sectionFour.offset().top  - 200 && body.hasClass('home')) { 
 		navItem.removeClass('nav-item-current');
 		$('#nav-shop').addClass('nav-item-current');
 	}
 }
 
 function updateSectionFive() {
-	if (win.scrollTop() >= sectionFive.offset().top  - 300 && body.hasClass('home')) { 
+	if (win.scrollTop() >= sectionFive.offset().top  - 200 && body.hasClass('home')) { 
 		navItem.removeClass('nav-item-current');
 		$('#nav-videos').addClass('nav-item-current');
 	}
 }
 
 function updateSectionSix() {
-	if (win.scrollTop() >= sectionSix.offset().top  - 300 && body.hasClass('home')) { 
+	if (win.scrollTop() >= sectionSix.offset().top  - 200 && body.hasClass('home')) { 
 		navItem.removeClass('nav-item-current');
 		$('#nav-photos').addClass('nav-item-current');
 	}

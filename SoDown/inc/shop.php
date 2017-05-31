@@ -6,7 +6,7 @@
 		<div class="shop-cta-btm">
 			SoDown Shop
 		</div>
-		<a href="<?php the_field('shop', 'option'); ?>" class="shop-button" target="_blank">
+		<a href="https://sodownmerch.bigcartel.com/" class="shop-button" target="_blank">
 			<span>Click Here</span>
 		</a>
 	</div>

@@ -19,18 +19,9 @@
 							$video_thumb = $video_thumb['sizes']['video_img'];
 						?>
 						<div>
-							<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="venobox if-link" data-type="ajax" data-gall="video" style="background-image: url(
-							<?php if($video_thumb) { ?>
-								<?php echo $video_thumb ?>
-							<?php } ?>
-							<?php if(!$video_thumb) { ?>
-								<?php video_thumbnail(); ?>
-							<?php } ?>)">
-								
-							</a>
+							<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="venobox if-link" data-type="ajax" data-gall="video" style="background-image: url(<?php if($video_thumb) { ?><?php echo $video_thumb; ?><?php }?><?php if(!$video_thumb) { ?><?php video_thumbnail(); ?><?php }?>)"></a>
 							<div id="post-<?php the_ID(); ?>" class="iframe-content">
-								<div class="video-container ">
-								</div>
+								
 							</div>
 						</div>
 					<?php endwhile; ?>

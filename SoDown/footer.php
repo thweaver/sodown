@@ -3,44 +3,44 @@
     	<ul class="sm-group-1">
     		<li class="sm-item">
     			<a href="<?php the_field('facebook', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-facebook.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-facebook.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('twitter', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-twitter.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-twitter.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('instagram', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-instagram.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-instagram.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('youtube', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-youtube.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-youtube.png">
     			</a>
     		</li>
     	</ul>
     	<ul class="sm-group-2">
     		<li class="sm-item">
     			<a href="<?php the_field('snapchat', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-snapchat.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-snapchat.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('spotify', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-spotify.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-spotify.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('soundcloud', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-soundcloud.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-soundcloud.png">
     			</a>
     		</li>
     		<li class="sm-item">
     			<a href="<?php the_field('itunes', 'option'); ?>" target="_blank">
-    				<?php include 'img/icon-apple.svg' ?>
+    				<img src="<?php bloginfo('template_url'); ?>/img/icon-apple.png">
     			</a>
     		</li>
     	</ul>

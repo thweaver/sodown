@@ -21,19 +21,12 @@
 							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_036d5e962bf299fc3b5d1f0a7_ef258b5804" tabindex="-1" value=""></div>
 							<input type="submit" class="newsletter-submit" value="Join" id="mc-embedded-subscribe">
 						</form>
-
-
-
-						<form action="//ImSoDown.us10.list-manage.com/subscribe/post?u=036d5e962bf299fc3b5d1f0a7&amp;id=d589f5903d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" novalidate>
+						<form action="//ImSoDown.us10.list-manage.com/subscribe/post?u=036d5e962bf299fc3b5d1f0a7&amp;id=ef258b5804" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" novalidate>
 							<input type="text" class="newsletter-input required" id="mce-EMAIL" value="Street Team Sign-Up" onblur="if (this.value == '') {this.value = 'Street Team Sign-Up';}"
 	 onfocus="if (this.value == 'Street Team Sign-Up') {this.value = '';}">
 							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_036d5e962bf299fc3b5d1f0a7_ef258b5804" tabindex="-1" value=""></div>
 							<input type="submit" class="newsletter-submit" value="Join" id="mc-embedded-subscribe">
 						</form>
-
-						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
-
 					</div>
 				</div>
 				<div class="contact-emails">
