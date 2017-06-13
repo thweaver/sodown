@@ -19,7 +19,7 @@
 <meta name="google-site-verification" content="quJEH4DeWCtmZZFwTTcU7Wn6rgEys4drBk1UM9NKHOQ" />
 <meta property="og:type" content="website" />
 <!--[if IE]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=5" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=6" />
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico?v=1" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script>if(typeof Modernizr == 'undefined'){document.write(unescape("%3Cscript src='<?php bloginfo('template_url'); ?>/js/modernizr.min.js'%3E%3C/script%3E"));}</script>
@@ -42,9 +42,7 @@
 
 	<div class="loader-container">
 		<div class="loader">
-			<span></span>
-			<span></span>
-			<span></span>
+			<img src="<?php bloginfo('template_url'); ?>/img/logo-sodown-header.png">
 		</div>
 	</div>
 	<nav>

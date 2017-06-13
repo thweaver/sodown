@@ -340,7 +340,15 @@ section {
 .loaded .loader-container {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .6s, visibility 0s .6s;
+  transition: opacity .6s .6s, visibility 0s 1.2s;
+}
+
+.loader img {
+  width: 75%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  animation: pulse-loader .6s infinite ease-in;
 }
 
 .loader span {
@@ -385,37 +393,18 @@ section {
   animation: grow2 .75s infinite alternate ease-in;
 }
 
-@keyframes grow {
-  25% {
-    transform: scaleY(0.3);
+@keyframes pulse-loader {
+  0% {
+    transform: scale(0.8);
   }
-  50% {
-    transform: scaleY(1.1);
+  65% {
+    transform: scale(1.2);
   }
-  75% {
-    transform: scaleY(0.3);
+  85% {
+    transform: scale(1.4);
   }
-}
-@keyframes grow1 {
-  25% {
-    transform: scaleY(1.1);
-  }
-  50% {
-    transform: scaleY(0.3);
-  }
-  75% {
-    transform: scaleY(1.1);
-  }
-}
-@keyframes grow2 {
-  25% {
-    transform: scaleY(0.5);
-  }
-  50% {
-    transform: scaleY(0.9);
-  }
-  50% {
-    transform: scaleY(0.3);
+  100% {
+    transform: scale(0.8);
   }
 }
 .loaded body {
@@ -425,19 +414,19 @@ section {
 .loaded .social-media,
 .loaded .scroll-prompt {
   opacity: 1;
-  transition: opacity .5s .5s, transform .5s .5s, background .3s;
+  transition: opacity .5s .8s, transform .5s 1.2s, background .3s;
   transform: translateY(0);
 }
 
 .loaded nav {
   opacity: 1;
-  transition: opacity .5s .5s, margin-top .5s .5s, background .3s;
+  transition: opacity .5s 1.2s, margin-top .5s 1.2s, background .3s;
   margin-top: 0;
 }
 
 .loaded .hero-logo {
   opacity: 1;
-  transition: opacity .5s .2s, transform .5s .2s ease-in;
+  transition: opacity .5s .8s, transform .5s .8s ease-in;
   transform: scale(1);
 }
 
