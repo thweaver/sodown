@@ -348,7 +348,7 @@ section {
   max-width: 150px;
   height: auto;
   display: block;
-  animation: pulse-loader .6s infinite ease-in;
+  animation: pulse-loader 1s infinite ease-in;
 }
 
 .loader span {
@@ -397,10 +397,7 @@ section {
   0% {
     transform: scale(0.8);
   }
-  65% {
-    transform: scale(1.2);
-  }
-  85% {
+  50% {
     transform: scale(1.4);
   }
   100% {
