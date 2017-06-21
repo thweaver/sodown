@@ -9,7 +9,7 @@
 					$sc_query = new WP_Query(array(
 						'posts_per_page' => 6,
 						'post_type' => 'videos',
-						'order' => 'ASC'
+						'order' => 'DSC'
 					));
 				?>
 				<?php if( $sc_query->have_posts() ) : ?>

@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="<?php bloginfo('language'); ?>"><![endif]-->
 <!--[if IE 7]><html class=" lt-ie10 lt-ie9 lt-ie8 ie7" lang="<?php bloginfo('language'); ?>"><![endif]-->
