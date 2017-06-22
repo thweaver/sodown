@@ -340,7 +340,7 @@ section {
 .loaded .loader-container {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .6s .6s, visibility 0s 1.2s;
+  transition: opacity .6s , visibility 0s .6s;
 }
 
 .loader img {
@@ -411,19 +411,19 @@ section {
 .loaded .social-media,
 .loaded .scroll-prompt {
   opacity: 1;
-  transition: opacity .5s .8s, transform .5s 1.2s, background .3s;
+  transition: opacity .5s .2s, transform .5s .6s, background .3s;
   transform: translateY(0);
 }
 
 .loaded nav {
   opacity: 1;
-  transition: opacity .5s 1.2s, margin-top .5s 1.2s, background .3s;
+  transition: opacity .5s .6s, margin-top .5s .6s, background .3s;
   margin-top: 0;
 }
 
 .loaded .hero-logo {
   opacity: 1;
-  transition: opacity .5s .8s, transform .5s .8s ease-in;
+  transition: opacity .5s .2s, transform .5s .2s ease-in;
   transform: scale(1);
 }
 
